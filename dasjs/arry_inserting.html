@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>array element in inserting</title>
+    <script>
+      // let data=[60,30,10,67,40];
+      // let newEl=100;
+      // let position=3;
+      // console.warn(data)
+
+      // for(let i=data.length-1; i>=0;i--){
+      //     // console.warn(data[i]);
+
+      //     if(i>=position)
+      //     {
+      //         data[i+1]=data[i];
+      //         if(i==position)
+      //         {
+      //             data[i]=newEl;
+      //         }
+      //     }
+      // }
+      // console.warn(data);
+
+      function insertEl() {
+        let data = [60, 30, 10, 67, 40];
+        let newEl = document.getElementById('newEl').value;
+        let position = document.getElementById('position').value;
+        console.warn(data);
+
+        for (let i = data.length - 1; i >= 0; i--) {
+          // console.warn(data[i]);
+
+          if (i >= position) {
+            data[i + 1] = data[i];
+            if (i == position) {
+              data[i] = newEl;
+            }
+          }
+        }
+        console.warn(data);
+      }
+
+      /*
+      let item = [10,20,30,40,50,60,70];
+      item.splice(3, 0, 3000); 
+      */
+    </script>
+  </head>
+  <body>
+    <input type="text" id="position" placeholder="enter position" />
+    <input type="text" id="newEl" placeholder="enter new element" />
+
+    <button onclick="insertEl()">insert</button>
+  </body>
+</html>
