@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Array Traversing</title>
+    <script>
+        let arr1 = [23,345,56,678,23,45,98,0,21,44];
+
+        //traversing array data
+        // for(let i=0; i<arr1.length;i++)
+        // {
+        //     document.write(`Array ${i} is ${arr1[i]}<br>`);
+        // }
+        //search array in value
+        // let x = 9;
+        // document.write(arr1[x]);
+
+        function getElement(){
+
+            let el = document.getElementById('element').value;
+            if(el<arr1.length && typeof parseInt(el) === "number" && el>=0)
+            {
+                alert(arr1[el]);
+                console.log(arr1[el]);
+            }
+            else
+            {
+
+                alert("Please enter valid data");
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <input type="text" id="element" />
+    <button onclick="getElement()">find value</button>
+</body>
+</html>
