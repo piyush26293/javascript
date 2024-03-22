@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Deleting the value in array</title>
+
+    <script>
+        // let data = [40,50,60,25,58,89,99];
+        // let position=4;
+
+        // for(let i = position; i<data.length-1; i++)
+        // {
+        //     data[i]=data[i+1];
+
+        // }
+        // data.length = data.length-1;
+        // console.warn(data);
+
+        function removeEl(){
+          let data = [40,50,60,25,58,89,99];
+          let position=document.getElementById('position').value;
+        position= parseInt(position);
+
+        for(let i = position; i<data.length-1; i++)
+        {
+            data[i]=data[i+1];
+
+        }
+        data.length = data.length-1;
+        console.warn(data);
+        }
+
+    </script>
+
+</head>
+<body>
+    <input type="text" id="position" placeholder="enter position"/>
+    <button onclick="removeEl()">submit</button>
+</body>
+</html>
