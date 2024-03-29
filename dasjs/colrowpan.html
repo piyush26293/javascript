@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Table example cols rows</title>
+  </head>
+  <body>
+    <table frame="box" rules="all" width="500">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>product name</th>
+          <th>price</th>
+          <th>qty</th>
+          <th>category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- td*4 -->
+          <td>101</td>
+          <td>smartphone</td>
+          <td>20000</td>
+          <td>1</td>
+          <td rowspan="2">electronic</td>
+        </tr>
+        <tr>
+          <td>102</td>
+          <td>headphone</td>
+          <td>5000</td>
+          <td>2</td>
+          
+        </tr>
+        <tr>
+          <td>103</td>
+          <td>earbud</td>
+          <td>15000</td>
+          <td>3</td>
+          
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+            <td colspan="2">total</td>
+            <td>1200</td>
+            <td>6</td>
+            <td></td>
+            
+          </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
