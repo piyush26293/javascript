@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Sorting</title>
+    <style>
+          /* this block is case cading style sheet and basically using for design purpose    */
+    </style>
+    <script>
+        let a = [20,50,13,25,60];
+        for (let i=0; i<a.length; i++)
+        {
+            for(j=0;j<a.length;j++){
+                // console.warn(a);
+
+                if(a[j]>a[j+1]){
+                    let temp = a[j];
+                    a[j]=a[j+1];
+                    a[j+1]=temp;
+                }
+            }
+            
+        }console.warn(a);
+    </script>
+</head>
+<body>
+    <h1>Array sorting</h1>
+</body>
+</html>
