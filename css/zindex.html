@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Z Index</title>
+    <style>
+        body{
+            border: 2px solid black;
+            margin: 0px;
+            height: 1000px;
+        }
+
+
+
+        .container{
+            border: 2px solid red;
+            padding: 50px;
+            width: 50%;
+            margin: 100px;
+            position: relative;
+        }
+
+        #one{
+            width: 150px;
+            height: 100px;
+            background-color: red;
+            display: inline-block;
+            position: relative;
+            z-index: 10;
+        }
+        #two{
+            width: 150px;
+            height: 100px;
+            background-color: green;
+            display: inline-block;
+            position: relative;
+            top: 5px;
+            right: 50px;
+        }
+
+        #three{
+            width: 150px;
+            height: 100px;
+            background-color: blue;
+            display: inline-block;
+            /* position: relative; */
+            position: relative;
+            top: 15px;
+            right: 50px;
+
+        }        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="one"></div>
+        <div id="two"></div>
+        <div id="three"></div>
+    </div>
+</body>
+</html>
