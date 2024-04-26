@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipkart home page of html</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+      .header {
+        /* border: 2px solid red; */
+        /* padding: 2px; */
+        box-shadow: 2px 2px 5px 5px rgb(190, 189, 189);
+
+        }
+      .category {
+        /* border: 2px solid green; */
+        margin: 5px;
+        box-shadow: 2px 2px 5px 5px rgb(190, 189, 189);
+      }
+      .searchInputBox {
+        padding: 5px;
+        width: 400px;
+        background-color: rgb(0, 0, 0, 0);
+        border-radius: 5px;
+      }
+      ul {
+        /* border: 2px solid red; */
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      ul li {
+        text-decoration: none;
+        list-style-type: none;
+      }
+
+      .logo{
+            /* border: 2px solid red; */
+
+
+            padding: -10px;
+        bottom: 135px;
+        height: 30px;
+        width: 122px;
+
+        }
+      /* img {
+       
+        padding: -10px;
+        bottom: 135px;
+        height: 30px;
+        width: 122px;
+      } */
+
+      .list-items{
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .category-image{
+        width: 40px;
+      }
+      .categroy-name{
+        font-size: 15px;
+        font-weight: 900;
+      }
+      #category-list{
+        padding: 10px;
+        margin: 5px;
+        /* box-shadow: 2px 2px 5px 5px rgb(190, 189, 189); */
+
+      }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="header">
+      <ul>
+        <li class="logo">
+          <img
+            src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_joinplus-3a4cec.svg"
+            alt=" "
+          />
+        </li>
+        <li>
+          <input
+            class="searchInputBox"
+            type="text"
+            placeholder="search for more product brand and more"
+          />
+        </li>
+        <li>
+          <a href="">Login</a>
+        </li>
+        <li>
+          <a href="">Cart</a>
+        </li>
+        <li>
+          <a href="">Become a seller</a>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+        <ul id="category-list">
+            <li class="list-items"><img class="category-image" src="https://rukminim2.flixcart.com/flap/80/80/image/29327f40e9c4d26b.png?q=100" alt="">
+                <span class="categroy-name">Grocery</span></li>
+            <li class="list-items"><img class="category-image" src="https://rukminim2.flixcart.com/flap/80/80/image/22fddf3c7da4c4f4.png?q=100" alt="">
+                <span class="categroy-name">Mobiles</span></li>
+            <li class="list-items"><img class="category-image" src="https://rukminim2.flixcart.com/flap/80/80/image/29327f40e9c4d26b.png?q=100" alt="">
+                <span class="categroy-name">Electronics</span></li>
+            <li class="list-items"><img class="category-image" src="https://rukminim2.flixcart.com/fk-p-flap/80/80/image/0d75b34f7d8fbcb3.png?q=100" alt="">
+                <span class="categroy-name">Fashion</span></li>
+            <li class="list-items"><img class="category-image" src="https://rukminim2.flixcart.com/flap/80/80/image/29327f40e9c4d26b.png?q=100" alt="">
+                <span class="categroy-name">Home & Furniture</span></li>
+            <li class="list-items"><img class="category-image" src="https://rukminim2.flixcart.com/fk-p-flap/80/80/image/0139228b2f7eb413.jpg?q=100" alt="">
+                <span class="categroy-name">Appliances</span></li>
+            <li class="list-items"><img class="category-image" src="https://rukminim2.flixcart.com/flap/80/80/image/29327f40e9c4d26b.png?q=100" alt="">
+                <span class="categroy-name">Travel</span></li>
+        </ul>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/11cd504bbc3a1493.jpg?q=20" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/4e1683644b55c4d5.jpg?q=20" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/a86d6e688296f007.png?q=20" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
