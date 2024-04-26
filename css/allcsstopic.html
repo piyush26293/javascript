@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipkart home page of html</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+      .header {
+        /* border: 2px solid red; */
+        /* padding: 2px; */
+        box-shadow: 2px 2px 5px 5px rgb(190, 189, 189);
+
+        }
+      .category {
+        /* border: 2px solid green; */
+        margin: 5px;
+        box-shadow: 2px 2px 5px 5px rgb(190, 189, 189);
+      }
+      .searchInputBox {
+        padding: 5px;
+        width: 400px;
+        background-color: rgb(0, 0, 0, 0);
+        border-radius: 5px;
+      }
+      ul {
+        /* border: 2px solid red; */
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      ul li {
+        text-decoration: none;
+        list-style-type: none;
+      }
+
+      .logo{
+            /* border: 2px solid red; */
+
+
+            padding: -10px;
+        bottom: 135px;
+        height: 30px;
+        width: 122px;
+
+        }
+      /* img {
+       
+        padding: -10px;
+        bottom: 135px;
+        height: 30px;
+        width: 122px;
+      } */
+
+      .list-items{
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .category-image{
+        width: 40px;
+      }
+      .categroy-name{
+        font-size: 15px;
+        font-weight: 900;
+      }
+      #category-list{
+        padding: 10px;
+        margin: 5px;
+        /* box-shadow: 2px 2px 5px 5px rgb(190, 189, 189); */
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <ul>
+        <li class="logo">
+          <img
+            src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_joinplus-3a4cec.svg"
+            alt=" "
+          />
+        </li>
+        <li>
+          <input
+            class="searchInputBox"
+            type="text"
+            placeholder="search for more product brand and more"
+          />
+        </li>
+        <li>
+          <a href="">Login</a>
+        </li>
+        <li>
+          <a href="">Cart</a>
+        </li>
+        <li>
+          <a href="">Become a seller</a>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+        <ul id="category-list">
+            <li class="list-items"><img class="category-image" src="https://rukminim2.flixcart.com/flap/80/80/image/29327f40e9c4d26b.png?q=100" alt="">
+                <span class="categroy-name">Grocery</span></li>
+            <li class="list-items"><img class="category-image" src="https://rukminim2.flixcart.com/flap/80/80/image/22fddf3c7da4c4f4.png?q=100" alt="">
+                <span class="categroy-name">Mobiles</span></li>
+            <li class="list-items"><img class="category-image" src="https://rukminim2.flixcart.com/flap/80/80/image/29327f40e9c4d26b.png?q=100" alt="">
+                <span class="categroy-name">Electronics</span></li>
+            <li class="list-items"><img class="category-image" src="https://rukminim2.flixcart.com/fk-p-flap/80/80/image/0d75b34f7d8fbcb3.png?q=100" alt="">
+                <span class="categroy-name">Fashion</span></li>
+            <li class="list-items"><img class="category-image" src="https://rukminim2.flixcart.com/flap/80/80/image/29327f40e9c4d26b.png?q=100" alt="">
+                <span class="categroy-name">Home & Furniture</span></li>
+            <li class="list-items"><img class="category-image" src="https://rukminim2.flixcart.com/fk-p-flap/80/80/image/0139228b2f7eb413.jpg?q=100" alt="">
+                <span class="categroy-name">Appliances</span></li>
+            <li class="list-items"><img class="category-image" src="https://rukminim2.flixcart.com/flap/80/80/image/29327f40e9c4d26b.png?q=100" alt="">
+                <span class="categroy-name">Travel</span></li>
+        </ul>
+    </div>
+  </body>
+</html>
