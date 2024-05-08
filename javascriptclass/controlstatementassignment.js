@@ -52,6 +52,9 @@ console.log(temp);
 
 // 7.Rever the Given number
 //  Input : 123
-//  Output :321
+//  Output :321                    
+
+
+
 
 
