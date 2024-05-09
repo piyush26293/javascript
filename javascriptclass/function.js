@@ -61,12 +61,20 @@ function isEven(num1){
     }
 }
 
-console.log("Fiveth example");
-isEven(30);
-isEven(29);
-var y = isEven(prompt());
-console.log(y);
+// console.log("Fiveth example");
+// isEven(30);
+// isEven(29);
+// var y = isEven(prompt());
+// console.log(y);
 
+
+function addd(num1, num2){
+    var result = num1 + num2;
+    console.log(result);
+}
+
+addd(20,40,50);
+addd("hello",1);
 
 
 
