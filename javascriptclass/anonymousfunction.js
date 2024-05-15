@@ -19,3 +19,16 @@ function myFn(f1){
 myFn(function(){
     console.log("Good Morning");
 })
+
+console.log("________________________________________________");
+
+function square(nu1, print){
+    var res =nu1*nu1;
+    console.log("Result is ",res);
+    print();
+}
+
+square(10,function(){
+    console.log("Hi piyush");
+})
+
