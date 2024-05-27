@@ -66,10 +66,19 @@ for(let i=0; i<marks.length; i++){
 }
 
 //for .... in loop
-for(let key in persons){
-    console.log(key, persons[key]);
+// for(let key in persons){
+//     // console.log(key, persons[key]);
+//     console.log(key, persons['age']);
+// }
+
+const markss=[23,34,65,98];
+for (let i in marks){
+    console.log(i, markss[i])
 }
 
+for (let i of marks){
+    console.log(marks);
+}
 
 
 
