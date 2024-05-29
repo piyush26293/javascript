@@ -1,0 +1,11 @@
+Homework
+
+1) Create an object named "person" with properties "name", "age", and "city". Assign values to these properties and then log the entire object to the console.
+
+2) Define a function called "printInfo" that takes an object as a parameter and prints out each key-value pair in the format "key: value".
+
+3) Write a program that checks if a given property exists in an object. The program should take an object and a property name as input and return true if the property exists in the object, otherwise return false.
+
+4) Create a method called "changeCity" for the "person" object created in question 1. This method should take a new city name as input and update the "city" property of the person object.
+
+5) Write a function called "getAverageAge" that takes an array of person objects (where each object has an "age" property) as input and returns the average age of all persons in the array.
