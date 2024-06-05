@@ -28,6 +28,7 @@ let full1 = a.concat(a).concat(b);
 console.log(full1)
 
 console.log(a.match("ma"));
+console.log(a.lastIndexOf("a"))
 
 
 
