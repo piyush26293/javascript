@@ -236,6 +236,8 @@ console.log(fruits)
 
 // Map.has() 
 
+
+
   
 
 console.log(fruits.has("bananas")) 
