@@ -1,383 +1,383 @@
- // Rest and Spread Operator - Three dots (...) 
+//  // Rest and Spread Operator - Three dots (...) 
 
  
 
-//1. Spread Operator 
+// //1. Spread Operator 
 
   
 
-// Arrays 
+// // Arrays 
 
-const numbers = [1,2,3]; 
+// const numbers = [1,2,3]; 
 
-const newArray = [...numbers, 4,5] // [1,2,3,4,5] 
+// const newArray = [...numbers, 4,5] // [1,2,3,4,5] 
 
-  const combined = [...numbers, ...newArray] // [1,2,3,4,5] 
+//   const combined = [...numbers, ...newArray] // [1,2,3,4,5] 
 
    
 
-  // Copy an array without reference 
+//   // Copy an array without reference 
 
    
 
-  const num1 = [1,2,3]; 
+//   const num1 = [1,2,3]; 
 
-  const num2 = [...num1] 
+//   const num2 = [...num1] 
 
-//2. Objects 
+// //2. Objects 
 
-const obj1 = {x:1, y:2}; 
+// const obj1 = {x:1, y:2}; 
 
-const obj2 = {z:3}; 
+// const obj2 = {z:3}; 
 
-const obj3= { 
+// const obj3= { 
 
-     ...obj1, 
+//      ...obj1, 
 
-     ...obj2 
+//      ...obj2 
 
-} // {x:1, y:2, z:3} 
-
-  
-
-const obj3 = {...obj1}; // With Reference 
-
- // Rest Parameter - ... 
-
-// It allows a function to accept an indefinite number of arguments as an array. 
-
-// It collects all remaining arguments into a single array variable 
-
-function sum(arr){ 
-
-    return arr.reduce((acc,num)=> acc+num, 0) 
-
-} 
-
-function sum(num1, num2, ...numbers){ 
-
-    console.log(num1, num2, numbers) 
-
-    return numbers.reduce((acc,num)=> acc+num, 0) 
-
-} 
-
-console.log(sum(3,5,50,6,8,9,5, 10)) 
-
-// console.log(sum([3,5,5,6,8,9])) 
-
- // Spread operator copies nested arary or nested object with reference 
+// } // {x:1, y:2, z:3} 
 
   
 
-const arr = ['a', 'b', 'c'];  
+// const obj3 = {...obj1}; // With Reference 
 
-const num = [1,2,3, arr]; 
+//  // Rest Parameter - ... 
+
+// // It allows a function to accept an indefinite number of arguments as an array. 
+
+// // It collects all remaining arguments into a single array variable 
+
+// function sum(arr){ 
+
+//     return arr.reduce((acc,num)=> acc+num, 0) 
+
+// } 
+
+// function sum(num1, num2, ...numbers){ 
+
+//     console.log(num1, num2, numbers) 
+
+//     return numbers.reduce((acc,num)=> acc+num, 0) 
+
+// } 
+
+// console.log(sum(3,5,50,6,8,9,5, 10)) 
+
+// // console.log(sum([3,5,5,6,8,9])) 
+
+//  // Spread operator copies nested arary or nested object with reference 
 
   
 
-const num2 = [...num] 
+// const arr = ['a', 'b', 'c'];  
 
-// console.log(num2) 
+// const num = [1,2,3, arr]; 
 
-// num2.push(7) 
+  
+
+// const num2 = [...num] 
+
+// // console.log(num2) 
+
+// // num2.push(7) 
+
+// // console.log(num) 
+
+// // console.log(num2) 
+
+  
+
+// num2[3].push('d') 
 
 // console.log(num) 
 
+  
+
 // console.log(num2) 
 
-  
-
-num2[3].push('d') 
-
-console.log(num) 
+// console.log(arr) 
 
   
 
-console.log(num2) 
-
-console.log(arr) 
+// const a = [{a:3}, {b:4}]; 
 
   
 
-const a = [{a:3}, {b:4}]; 
+// const b = [...a] 
+
+// b[0].z = 90 
 
   
 
-const b = [...a] 
+// console.log(a) 
 
-b[0].z = 90 
-
-  
-
-console.log(a) 
-
-console.log(b) 
+// console.log(b) 
 
   
 
-const b = JSON.parse(JSON.stringify(a)) 
+// const b = JSON.parse(JSON.stringify(a)) 
 
   
 
   
 
-const fruits = new Map([ 
+// const fruits = new Map([ 
 
-  ["apples", 500], 
+//   ["apples", 500], 
 
-  ["bananas", 300], 
+//   ["bananas", 300], 
 
-  ["oranges", 200] 
+//   ["oranges", 200] 
 
-]); 
+// ]); 
 
-console.log(fruits) 
+// console.log(fruits) 
 
-const arr = [1,2,3] 
-
-  
-
-// Add values to map 
-
-map.set("z", 5) 
-
-map.set("b", 3) 
-
-map.set("a", 10) 
-
-map.set(arr, 100) 
+// const arr = [1,2,3] 
 
   
 
-// In map keys can be anything - array, function, object 
+// // Add values to map 
+
+// map.set("z", 5) 
+
+// map.set("b", 3) 
+
+// map.set("a", 10) 
+
+// map.set(arr, 100) 
 
   
 
-console.log(map) 
+// // In map keys can be anything - array, function, object 
 
   
 
-// Get values from map 
-
-console.log(map.get(arr)) 
+// console.log(map) 
 
   
 
-// Type of map 
+// // Get values from map 
 
-console.log(typeof map) 
+// console.log(map.get(arr)) 
 
-// Object                                Map 
+  
 
-// Not directly iterable               Directly iterable 
+// // Type of map 
 
-// Do not have a size property           Have a size property 
+// console.log(typeof map) 
 
-// Keys must be Strings (or Symbols)   Keys can be any datatype 
+// // Object                                Map 
 
-// Keys are not well ordered           Keys are ordered by insertion 
+// // Not directly iterable               Directly iterable 
+
+// // Do not have a size property           Have a size property 
+
+// // Keys must be Strings (or Symbols)   Keys can be any datatype 
+
+// // Keys are not well ordered           Keys are ordered by insertion 
 
   
 
   
 
-// Iterate over map 
+// // Iterate over map 
 
-map.forEach((value, key)=>{ 
+// map.forEach((value, key)=>{ 
 
-    console.log(key, value) 
+//     console.log(key, value) 
 
-} 
+// } 
 
-) 
+// ) 
 
-// Find size of map 
-
-  
-
-console.log(map.size) 
+// // Find size of map 
 
   
 
-const fruits = new Map([ 
-
-  ["apples", 500], 
-
-  ["bananas", 300], 
-
-  ["oranges", 200] 
-
-]); 
+// console.log(map.size) 
 
   
 
-console.log(fruits) 
+// const fruits = new Map([ 
+
+//   ["apples", 500], 
+
+//   ["bananas", 300], 
+
+//   ["oranges", 200] 
+
+// ]); 
 
   
-
-// Delete an item from Map 
-
-fruits.delete("apples") 
-
-console.log(fruits) 
-
-  
-
-// clear() - removes all elements 
-
-  
-
-// fruits.clear() 
 
 // console.log(fruits) 
 
   
 
-// Map.has() 
+// // Delete an item from Map 
+
+// fruits.delete("apples") 
+
+// console.log(fruits) 
+
+  
+
+// // clear() - removes all elements 
+
+  
+
+// // fruits.clear() 
+
+// // console.log(fruits) 
+
+  
+
+// // Map.has() 
 
 
 
   
 
-console.log(fruits.has("bananas")) 
+// console.log(fruits.has("bananas")) 
 
-// Set 
+// // Set 
 
-// Its an array with unique values. 
+// // Its an array with unique values. 
 
-// Create  
+// // Create  
 
-const letters = new Set(['a','b','c']); 
-
-  
-
-  
-
-console.log(letters); 
-
-  
-
-// Add item to set 
-
-letters.add('z') 
-
-console.log(letters) 
-
-  
-
-// Doesn't allow duplicate values 
-
-letters.add('a') 
-
-console.log(letters) 
-
-  
-
-// Print 
-
-  
-
-for (const x of letters) { 
-
-  console.log(x) 
-
-} 
-
-// has() 
-
-console.log(letters.has('a')) 
-
-  
-
-// forEach 
-
-letters.forEach (function(value) { 
-
-  console.log(value) 
-
-}) 
+// const letters = new Set(['a','b','c']); 
 
   
 
   
 
-// delete() 
-
-letters.delete('a'); 
-
-console.log(letters) 
+// console.log(letters); 
 
   
 
-letters.add([1,2,3]) 
+// // Add item to set 
 
-console.log(letters) 
-
-letters.add([1,2,3]) 
-
-console.log(letters) 
-
-  
-
-  
-
-const a = [1,2,3]; 
-
-letters.add(a) 
-
-console.log(letters) 
-
-letters.add(a) 
-
-console.log(letters) 
-
-  
-
-  
-
-// // clear() 
-
-// letters.clear() 
+// letters.add('z') 
 
 // console.log(letters) 
 
   
 
-// size 
+// // Doesn't allow duplicate values 
 
-console.log(letters.size) 
+// letters.add('a') 
 
-  
-
-const numbers = [1,2,3,2,4,3]; 
-
-const values = new Set(numbers); 
-
-console.log(Array.from(values)) 
+// console.log(letters) 
 
   
 
-// Removes duplicate; 
+// // Print 
 
-const numbers = [1,2,3,2,4,3]; 
+  
+
+// for (const x of letters) { 
+
+//   console.log(x) 
+
+// } 
+
+// // has() 
+
+// console.log(letters.has('a')) 
+
+  
+
+// // forEach 
+
+// letters.forEach (function(value) { 
+
+//   console.log(value) 
+
+// }) 
 
   
 
   
 
-const map = { 
+// // delete() 
 
-    "1": true, 
+// letters.delete('a'); 
 
-    "2": true, 
-
-    "3": true, 
-
-    "4": true 
-
-} 
+// console.log(letters) 
 
   
 
-[1,2,3,4] 
+// letters.add([1,2,3]) 
+
+// console.log(letters) 
+
+// letters.add([1,2,3]) 
+
+// console.log(letters) 
+
+  
+
+  
+
+// const a = [1,2,3]; 
+
+// letters.add(a) 
+
+// console.log(letters) 
+
+// letters.add(a) 
+
+// console.log(letters) 
+
+  
+
+  
+
+// // // clear() 
+
+// // letters.clear() 
+
+// // console.log(letters) 
+
+  
+
+// // size 
+
+// console.log(letters.size) 
+
+  
+
+// const numbers = [1,2,3,2,4,3]; 
+
+// const values = new Set(numbers); 
+
+// console.log(Array.from(values)) 
+
+  
+
+// // Removes duplicate; 
+
+// const numbers = [1,2,3,2,4,3]; 
+
+  
+
+  
+
+// const map = { 
+
+//     "1": true, 
+
+//     "2": true, 
+
+//     "3": true, 
+
+//     "4": true 
+
+// } 
+
+  
+
+// [1,2,3,4] 
