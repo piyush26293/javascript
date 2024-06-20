@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "public": "public",
+    "site": "web134",
+    
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

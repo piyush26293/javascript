@@ -1,0 +1,101 @@
+<html> 
+
+    <head> 
+
+        <style> 
+
+            .demopara{ 
+
+                color: red; 
+
+            } 
+
+        </style> 
+
+    </head> 
+
+    <body> 
+
+        <p id="myparagraph">Hello How are you?</p> 
+
+        <p id="myparagraph1">Hello How are you?</p> 
+
+        <p id="myparagraph2" class="demopara">Hello How are you? 
+
+  
+
+        </p> 
+
+        <p id="demo" class="demopara"></p> 
+
+        <button onclick="handleOnClick()">Click me</button> 
+
+        <script> 
+
+            function handleOnClick(){ 
+
+                console.log('I have clicked button') 
+
+            } 
+
+            setTimeout(()=>{ 
+
+                console.log("I have waited for 3 seconds!") 
+
+            }, 3000) 
+
+            console.log("Element at the end", document.getElementById('demo') ) 
+
+            // Changes the content of element 
+
+            const myP = document.getElementById('demo'); 
+
+            myP.innerHTML = `<p>Another <a href="www.google.com">para</a></p>` 
+
+            // Changes style of elements.  
+
+            myP.style.color = "green"; 
+
+  
+
+            // Get all elements using Tag name 
+
+            const allParagraphs = document.getElementsByTagName("p"); 
+
+            console.log('All Paragraphs', allParagraphs) 
+
+  
+
+            // Get all elements using class 
+
+            const pp = document.getElementsByClassName("demopara"); 
+
+            console.log('Elements having class', pp) 
+
+  
+
+            // Add new element in DOM using javascript. 
+
+           const newElement =  document.createElement('body'); 
+
+           newElement.innerHTML = "I am a body tag"; 
+
+           document.getElementById('myparagraph2').appendChild(newElement) 
+
+  
+
+           // Add event using javscript 
+
+           newElement.addEventListener("click", function (){ 
+
+            console.log('I have clicked the div.', this) 
+
+           }) 
+
+         </script> 
+
+        <!-- <script src="a.js"></script> --> 
+
+    </body> 
+
+</html> 
