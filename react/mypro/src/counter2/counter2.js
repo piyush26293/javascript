@@ -13,11 +13,22 @@ export function Counter2(props){
         console.log("Updated Count", updatedCount);
     }
 
+    const decrement = ()=>{
+        // console.log("Current count", count );
+        // count++;
+        // console.log("Updated Count",count)
+
+        const updatedCount = count-1;
+        setCount(updatedCount)
+        console.log("Updated Count", updatedCount);
+    }
+
     return <div>
         <p>Counter Component : {props.counterName}</p>
         Count : {count}
         <br></br><br></br>
         <button onClick={increment}>Increment</button>
+        <button onClick={decrement}>decrement</button>
     </div>
 }
 
