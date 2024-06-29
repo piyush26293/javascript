@@ -6,6 +6,7 @@ import { Counter2 } from './counter2/counter2';
 import { UserProfile } from './UserProfile/UserProfile';
 import { TodoList } from './TodoList/TodoList';
 import { UsersList } from './UserProfile/UserList';
+import { Flag } from './Flag/flag';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
 
     {/* <TodoList /> */}
     <UsersList />
+    <Flag />
+
+    <TodoList />
 
 
     </div>

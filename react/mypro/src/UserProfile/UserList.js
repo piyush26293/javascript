@@ -12,16 +12,16 @@ export function UsersList(){
     },
     {
         id:'2',
-        firstName: "Roasdfsahit",
-        lastName: "shaasdfrma",
+        firstName: "piyush",
+        lastName: "ahirwar",
         age:60,
         gender:"male",
         isAdmin :true
     },
     {
         id:'3',
-        firstName: "asdfsaRasohit",
-        lastName: "asdfharma",
+        firstName: "babu rao aapte",
+        lastName: "paresh rwaal",
         age:60,
         gender:"male",
         isAdmin :true
@@ -39,6 +39,7 @@ export function UsersList(){
             users.map(user=>{
                 return <div key = {user.id}>
                     <UserProfile firstName={user.firstName} lastName={user.lastName} age={user.age} gender={user.gender} isAdmin={user.isAdmin}></UserProfile>
+                    <hr></hr>
                 </div>
             })
         }
