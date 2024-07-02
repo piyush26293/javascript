@@ -1,0 +1,11 @@
+input{
+    background-color: brown;
+    padding: 5px 4px;
+}
+
+
+
+.todo-list-container{
+    display: flex;
+    gap: 5px;
+}

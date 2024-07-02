@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./TodoList.css";
 
 export function TodoList(){
     const [todos, setTodos] = useState([{taskId:1, name:"rohit"},{taskId:2, name:"ram"},{taskId:3, name:"ronit"}])
@@ -9,7 +10,13 @@ export function TodoList(){
         setText(e.target.value)
     }
 
-    return <div>
+    const onDelete = (taskId) =>{
+        // alert(taskId)
+        const filteredTodo = todos.filter(todos=>todos.taskId !==taskId);
+        setTodos([...filteredTodo])
+    }
+
+    return <div style={{backgroundColor:"blue", color:"red"}}>
         <input placeholder="Enter Todo" value={text} onChange={onInputChange}></input>
         <button onClick={() =>{
             const updatedTodos = [...todos];
@@ -18,10 +25,19 @@ export function TodoList(){
             setTodos(updatedTodos);
 
         }}>Add</button>
-
+       <div className="todo-list-container">
         {todos.map((todo)=>{
-            return <p key={todo.taskId}>{todo.name}</p>
+            return <div>
+                <p key={todo.taskId}>{todo.name}</p>
+                <hr></hr>
+                <button onClick={()=>{
+                    onDelete(todo.taskId)
+                }}>delete</button>
+            </div> 
+            
         })}
+        
+        </div>
     </div>
 }
 
