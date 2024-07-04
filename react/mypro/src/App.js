@@ -7,6 +7,7 @@ import { UserProfile } from './UserProfile/UserProfile';
 import { TodoList } from './TodoList/TodoList';
 import { UsersList } from './UserProfile/UserList';
 import { Flag } from './Flag/flag';
+import { FormExample } from './FormExample';
 
 function App() {
   return (
@@ -30,7 +31,9 @@ function App() {
     {/* <UsersList />
     <Flag /> */}
 
-    <TodoList />
+    {/* <TodoList /> */}
+
+    <FormExample></FormExample>
 
 
     </div>
