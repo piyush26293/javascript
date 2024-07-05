@@ -9,6 +9,8 @@ import { UsersList } from './UserProfile/UserList';
 import { Flag } from './Flag/flag';
 import { FormExample } from './FormExample';
 import { FormikExample } from './FormikExample';
+import { ImageCarasoul } from './ImageCarasoul/imageCarasoul';
+import { ContextExample } from './context/ContextExample';
 
 function App() {
   return (
@@ -35,7 +37,9 @@ function App() {
     {/* <TodoList /> */}
 
     {/* <FormExample></FormExample> */}
-    <FormikExample></FormikExample>
+    {/* <FormikExample></FormikExample> */}
+    {/* <ImageCarasoul></ImageCarasoul> */}
+    <ContextExample></ContextExample>
 
 
     </div>
