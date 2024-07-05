@@ -8,6 +8,7 @@ import { TodoList } from './TodoList/TodoList';
 import { UsersList } from './UserProfile/UserList';
 import { Flag } from './Flag/flag';
 import { FormExample } from './FormExample';
+import { FormikExample } from './FormikExample';
 
 function App() {
   return (
@@ -33,7 +34,8 @@ function App() {
 
     {/* <TodoList /> */}
 
-    <FormExample></FormExample>
+    {/* <FormExample></FormExample> */}
+    <FormikExample></FormikExample>
 
 
     </div>
