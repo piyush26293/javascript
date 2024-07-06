@@ -11,8 +11,12 @@ import { FormExample } from './FormExample';
 import { FormikExample } from './FormikExample';
 import { ImageCarasoul } from './ImageCarasoul/imageCarasoul';
 import { ContextExample } from './context/ContextExample';
+import { UseEffectExample } from './UseEffect/UseEffectExample';
+import { UseEffectExample2 } from './UseEffect/UseEffectExample2';
+import { useState } from 'react';
 
 function App() {
+  const [name, setName] = useState("Rohit");
   return (
     <div class="app">
     {/* <Counter name="rohit"></Counter>
@@ -39,7 +43,11 @@ function App() {
     {/* <FormExample></FormExample> */}
     {/* <FormikExample></FormikExample> */}
     {/* <ImageCarasoul></ImageCarasoul> */}
-    <ContextExample></ContextExample>
+    {/* <ContextExample></ContextExample> */}
+
+    {/* <UseEffectExample></UseEffectExample> */}
+    <UseEffectExample2 name={name}></UseEffectExample2>
+    <button onClick={ ()=>setName(name+Math.random()*9)}>changes name</button>
 
 
     </div>
