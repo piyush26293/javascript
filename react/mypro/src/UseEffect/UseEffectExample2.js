@@ -24,6 +24,7 @@ export function UseEffectExample2({name}){
     // Example 3 - with dependency Array
     useEffect(()=>{
         console.log('3 - This is executed only once when component is renderd.')
+        
 
         //Cleanup Function
         return ()=>{
