@@ -14,9 +14,10 @@ import { ContextExample } from './context/ContextExample';
 import { UseEffectExample } from './UseEffect/UseEffectExample';
 import { UseEffectExample2 } from './UseEffect/UseEffectExample2';
 import { useState } from 'react';
+import { UserCrudWrapper } from './UserCrud/UserCrudWrapper';
 
 function App() {
-  const [name, setName] = useState("Rohit");
+  // const [name, setName] = useState("Rohit");
   return (
     <div class="app">
     {/* <Counter name="rohit"></Counter>
@@ -46,8 +47,16 @@ function App() {
     {/* <ContextExample></ContextExample> */}
 
     {/* <UseEffectExample></UseEffectExample> */}
-    <UseEffectExample2 name={name}></UseEffectExample2>
-    <button onClick={ ()=>setName(name+Math.random()*9)}>changes name</button>
+    {/* <UseEffectExample2 name={name}></UseEffectExample2>
+    <button onClick={ ()=>setName(name+Math.random()*9)}>changes name</button> */}
+
+
+    {/* Mini Project */}
+
+    <UserCrudWrapper></UserCrudWrapper>
+
+
+
 
 
     </div>
