@@ -15,11 +15,45 @@ import { UseEffectExample } from './UseEffect/UseEffectExample';
 import { UseEffectExample2 } from './UseEffect/UseEffectExample2';
 import { useState } from 'react';
 import { UserCrudWrapper } from './UserCrud/UserCrudWrapper';
+import {Routes,Route, Link, useNavigate } from 'react-router-dom';
+
+
 
 function App() {
   // const [name, setName] = useState("Rohit");
+  const navigate  = useNavigate();
   return (
     <div class="app">
+
+      {/* APP COMPONENT */}
+
+      <div className='header'>APP Component</div>
+      <div className='container-body'>
+        <div className='sidebar'>
+          <Link to={"/"}>Home</Link>
+          <Link to={"/counter-path"}>Counter</Link>
+          <Link to={"/users"}>Users</Link>
+          {/* <Link to={"/greeting"}>Greeting</Link> */}
+          <button onClick={()=>{
+            navigate("/greeting-path")
+          }}>Increase</button>
+        
+        </div>
+        <div className='content'>
+          
+          <Routes>
+            <Route path='/' element={<div>Content</div>}></Route>
+            <Route path='/counter-path' element={<Counter></Counter>}></Route>
+            <Route path='/greeting-path' element={<Counter2></Counter2>}></Route>
+            <Route path='/users/*' element={<UserCrudWrapper></UserCrudWrapper>}></Route>
+            <Route path='*' element={<div>This url is not mapped</div>}></Route>
+          </Routes>
+        </div>
+
+      </div>
+
+
+
     {/* <Counter name="rohit"></Counter>
     <br></br>
     <Counter name="rohit" lastname="olly"></Counter>
@@ -53,7 +87,7 @@ function App() {
 
     {/* Mini Project */}
 
-    <UserCrudWrapper></UserCrudWrapper>
+    {/* <UserCrudWrapper></UserCrudWrapper> */}
 
 
 
