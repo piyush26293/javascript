@@ -1,18 +1,19 @@
 import { Field, Form, Formik } from "formik";
 
-export function UserForm({onUserFormSubmit}){
+export function UserForm({user,onUserFormSubmit}){
     return <div className="user-creation-form">
         <Formik
+            enableReinitialize={true}
             initialValues = {{
-                firstName:'',
-                lastName:'',
-                email:'',
-                mobile:''
+                firstName:user?.firstName ||'',
+                lastName:user?.lastName ||'',
+                email:user?.email||'',
+                mobile:user?.mobile||''
             }}
             onSubmit={(values,{resetForm})=>{
                 console.log("Submitted Values",values)
-                onUserFormSubmit(values)
-                resetForm()
+                onUserFormSubmit(values, user?.id)
+                resetForm({firstName:'',lastName:'', email:'',mobile:''})
             }}
 
         >
