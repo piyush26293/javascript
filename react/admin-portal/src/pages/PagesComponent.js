@@ -25,6 +25,9 @@ import InventoryIcon from '@mui/icons-material/Inventory';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import GroupIcon from '@mui/icons-material/Group';
 import MailIcon from '@mui/icons-material/Mail';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import Collapse from '@mui/material/Collapse';
 const drawerWidth = 240;
 
 export function PagesComponent() {
@@ -40,6 +43,7 @@ export function PagesComponent() {
 
     const theme = useTheme();
     const [open, setOpen] = React.useState(true);
+    const [menuOpen, setMenuOpen] = React.useState(true);
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -90,7 +94,7 @@ export function PagesComponent() {
                 <List>
                     {[
                         {title:'Dashboard', route: 'dashboard', icon: <DashboardIcon />},
-                        {title:'Categories', route: 'categories', icon: <InboxIcon />},
+                        {title:'Categories', route: 'categories', icon: <InboxIcon />, isCollapsable:true},
                         {title:'Product', route: 'products', icon: <InventoryIcon />},
                         {title:'Orders', route: 'orders', icon: <ShoppingCartIcon />},
                         {title:'Users', route: 'users', icon: <GroupIcon />},
@@ -103,6 +107,9 @@ export function PagesComponent() {
                                     {obj.icon}
                                 </ListItemIcon>
                                 <ListItemText primary={obj.title} />
+                                {obj.isCollapsable ? <> 
+                                {menuOpen ? <ExpandLess /> : <ExpandLess />}
+                                </>:null}
                             </ListItemButton>
                         </ListItem>
                     ))}
