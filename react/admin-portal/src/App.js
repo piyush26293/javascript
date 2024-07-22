@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Navigate to={isAuthenticated ?"/pages":"login"} replace={true}></Navigate>}></Route>
         <Route path='login' element={<LoginComponent></LoginComponent>}></Route>
-        <Route path='pages' element={<PagesComponent></PagesComponent>}></Route>
+        <Route path='pages/*' element={<PagesComponent></PagesComponent>}></Route>
         {/* <ProtectedRoute>
         <Route path='pages' element={<PagesComponent></PagesComponent>}></Route>
         </ProtectedRoute> */}
