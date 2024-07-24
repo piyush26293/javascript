@@ -1,16 +1,19 @@
-import { useEffect, useState } from "react";
-import {useNavigate} from "react-router-dom";
+import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom";
 
-export function useAuth(){
-    const [isAuthenticated, setAuth] = useState(true);
+export function useAuth() {
+    const [isAuthenticated, setAuth] = useState(false);
     const navigate = useNavigate();
 
-    useEffect(()=>{
+    useEffect(() => {
         const token = localStorage.getItem('token');
-        if(token){
+        console.log("Token", token)
+        if (token) {
             setAuth(true)
-        }else {
+        } else {
             setAuth(false)
         }
-    },[navigate])
+    }, [navigate])
+
+    return isAuthenticated;
 }

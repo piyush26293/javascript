@@ -35,7 +35,7 @@ export function LoginComponent() {
         onSubmit: (values) => {
             // Login API call
             localStorage.setItem("token", "some-token")
-            navigate("/pages/desboard")
+            navigate("/pages")
         },
     });
     return <div className="login-component">

@@ -28,6 +28,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Collapse from '@mui/material/Collapse';
+import StarBorder from '@mui/icons-material/StarBorder';
+import { CategoriesComponent } from "./categories/CategoriesComponent";
 const drawerWidth = 240;
 
 export function PagesComponent() {
@@ -44,6 +46,7 @@ export function PagesComponent() {
     const theme = useTheme();
     const [open, setOpen] = React.useState(true);
     const [menuOpen, setMenuOpen] = React.useState(true);
+
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -74,7 +77,7 @@ export function PagesComponent() {
             </AppBar>
             <Drawer
                 sx={{
-                    width: open? drawerWidth: 0,
+                    width: open ? drawerWidth : 0,
                     flexShrink: 0,
                     '& .MuiDrawer-paper': {
                         width: drawerWidth,
@@ -93,41 +96,61 @@ export function PagesComponent() {
                 <Divider />
                 <List>
                     {[
-                        {title:'Dashboard', route: 'dashboard', icon: <DashboardIcon />},
-                        {title:'Categories', route: 'categories', icon: <InboxIcon />, isCollapsable:true},
-                        {title:'Product', route: 'products', icon: <InventoryIcon />},
-                        {title:'Orders', route: 'orders', icon: <ShoppingCartIcon />},
-                        {title:'Users', route: 'users', icon: <GroupIcon />},
-                     ].map((obj, index) => (
-                        <ListItem key={obj.title} disablePadding onClick={()=>{
-                            navigate(obj.route)
-                        }}>
-                            <ListItemButton>
+                        { title: 'Dashboard', route: 'dashboard', icon: <DashboardIcon /> },
+                        {
+                            title: 'Categories', route: 'categories', icon: <InboxIcon />, isCollapsable: true,
+                            children: [
+                                { title: 'Main Categories', route: 'categories/main-categories', icon: <DashboardIcon /> },
+                                { title: 'Sub Categories', route: 'categories/sub-categories', icon: <DashboardIcon /> }
+                            ]
+                        },
+                        { title: 'Product', route: 'products', icon: <InventoryIcon /> },
+                        { title: 'Orders', route: 'orders', icon: <ShoppingCartIcon /> },
+                        { title: 'Users', route: 'users', icon: <GroupIcon /> },
+                    ].map((obj, index) => (
+                        <React.Fragment key={obj.title}>
+                            <ListItemButton onClick={() => {
+                                navigate(obj.route)
+                                if (obj.isCollapsable) {
+                                    setMenuOpen(!menuOpen)
+                                }
+                            }}>
                                 <ListItemIcon>
                                     {obj.icon}
                                 </ListItemIcon>
                                 <ListItemText primary={obj.title} />
-                                {obj.isCollapsable ? <> 
-                                {menuOpen ? <ExpandLess /> : <ExpandLess />}
-                                </>:null}
+                                {obj.isCollapsable && <>
+                                    {menuOpen ? <ExpandLess /> : <ExpandMore />}
+                                </>}
                             </ListItemButton>
-                        </ListItem>
+                            {obj.isCollapsable && <Collapse in={menuOpen} timeout="auto" unmountOnExit>
+                                <List component="div" disablePadding>
+                                    {obj.children.map(child => {
+                                        return <ListItemButton sx={{ pl: 4 }} onClick={()=>  navigate(child.route)}>
+                                            <ListItemIcon>
+                                                {child.icon}
+                                            </ListItemIcon>
+                                            <ListItemText primary={child.title} />
+                                        </ListItemButton>
+                                    })}
+                                </List>
+                            </Collapse>}
+                        </React.Fragment>
                     ))}
                 </List>
             </Drawer>
             <Main open={open}>
                 <DrawerHeader />
-                 <div>
-                    Main Content
+                <div>
                     <Routes>
                         <Route path='/' element={<Navigate to={"dashboard"} replace={true} />}></Route>
                         <Route path="dashboard" element={<div>Dashboard component</div>}></Route>
-                        <Route path="categories" element={<div>Categories component</div>}></Route>
+                        <Route path="categories/*" element={<CategoriesComponent></CategoriesComponent>}></Route>
                         <Route path="products" element={<div>Products component</div>}></Route>
                         <Route path="orders" element={<div>Orders component</div>}></Route>
                         <Route path="users" element={<div>Users component</div>}></Route>
                     </Routes>
-                 </div>
+                </div>
             </Main>
         </Box>
     );
