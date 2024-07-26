@@ -1,8 +1,13 @@
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import moment from 'moment';
+import axios from 'axios';
+import { useEffect } from "react";
+import { setSubCategories } from "../../../store/subCategorySlice";
+
 
 export function SubCategoriesList() {
+    const dispatch = useDispatch();
     const mainCategories = useSelector(store => store.mainCategories)
     const mapping = mainCategories.reduce((mapp, category)=>{
         mapp[category.id] = category.name
@@ -12,6 +17,26 @@ export function SubCategoriesList() {
     const subCategories = subCategoriesData.map(subCategory=> {
         return { ...subCategory, mainCategory: mapping[subCategory.categoryId]}
     })
+
+    
+   
+    useEffect(()=>{
+        //API Call
+        axios.get('http://localhost:3001/subCategories')
+          .then (function(response){
+            //handle success
+            console.log("Categories Response",response.data)
+            const data = response.data;
+            dispatch(setSubCategories(data))
+          })
+          .catch(function(error){
+            console.log("there is erorr",error)
+          })
+          .finally(function(){
+            
+          })
+          
+    },[])
 
     return <div>
         <TableContainer component={Paper}>
